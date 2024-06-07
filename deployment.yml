@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: wisecow-deployment
+  labels:
+    app: wisecow-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: wisecow-app
+  template:
+    metadata:
+      labels:
+        app: wisecow-app
+    spec:
+      containers:
+        - image: adarsh-wiscow:v1
+          name: wisecow-app
+          ports:
+            - containerPort: 4499
+          resources: {}
+status: {}
