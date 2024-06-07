@@ -15,7 +15,7 @@ spec:
         app: wisecow-app
     spec:
       containers:
-        - image: adarsh-wiscow:v1
+        - image: adarshimage/wiscow:v1
           name: wisecow-app
           ports:
             - containerPort: 4499
