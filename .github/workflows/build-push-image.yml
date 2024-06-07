@@ -28,7 +28,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: adarshimage/wiscow:v1
+          tags: adarsh435/wiscow:v1
 
   deploy-to-kubernetes:
     runs-on: ubuntu-latest
