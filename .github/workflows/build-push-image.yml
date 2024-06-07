@@ -51,4 +51,4 @@ jobs:
 
       - name: Update Kubernetes Deployment
         run: |
-          kubectl set image deployment/deployment wisecow=yashgangwar123/wisecow:latest
+          kubectl set image deployment/deployment wisecow=adarsh435/wiscow:v1
