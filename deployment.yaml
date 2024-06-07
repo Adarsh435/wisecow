@@ -9,6 +9,8 @@ spec:
   selector:
     matchLabels:
       app: wisecow-app
+  strategy:
+    type: RollingUpdate
   template:
     metadata:
       labels:
@@ -17,7 +19,11 @@ spec:
       containers:
         - image: adarsh435/wiscow:v1
           name: wisecow-app
+          resources:
+            limit:
+              memory: 200Mi
+            requests:
+              cpu: 100m
+              memory: 200Mi
           ports:
             - containerPort: 4499
-          resources: {}
-status: {}
